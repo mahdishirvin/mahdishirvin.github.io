@@ -16,11 +16,13 @@ html {
 body {
   line-height: var(--lh-normal);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 img,
 picture,
-svg {
+svg,
+canvas {
   display: block;
   max-width: 100%;
 }

@@ -1,27 +1,36 @@
 :root {
-  /* Color — one light surface, ink text, one accent used sparingly */
-  --color-bg: #f7f6f2;
-  --color-bg-raised: #efeee8;
-  --color-ink: #14161a;
-  --color-ink-muted: #6b6f76;
-  --color-line: rgba(20, 22, 26, 0.12);
-  --color-accent: #2f5fae;
+  /* Color — cinematic dark, dual-accent gradient */
+  --color-bg: #05060a;
+  --color-bg-raised: #0d0f1a;
+  --color-surface: #12141f;
+  --color-fg: #f4f5f7;
+  --color-fg-muted: #9aa0ac;
+  --color-line: rgba(244, 245, 247, 0.12);
 
-  /* Type — monospace throughout, weight/size carry hierarchy */
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  --color-accent-1: #8b5cf6;
+  --color-accent-2: #22d3ee;
+  --gradient-accent: linear-gradient(135deg, var(--color-accent-1), var(--color-accent-2));
 
-  --fs-display: clamp(2rem, 1.5rem + 2.2vw, 3.25rem);
-  --fs-h2: 1rem;
-  --fs-lead: clamp(1rem, 0.95rem + 0.3vw, 1.125rem);
-  --fs-body: 0.9375rem;
-  --fs-small: 0.8125rem;
-  --fs-micro: 0.6875rem;
+  /* Type */
+  --font-display: "Clash Display", "Inter", -apple-system, sans-serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
-  --lh-tight: 1.2;
-  --lh-normal: 1.65;
+  --fs-hero: clamp(3.5rem, 3rem + 7vw, 9.5rem);
+  --fs-h2: clamp(2.25rem, 1.8rem + 2vw, 3.5rem);
+  --fs-h3: clamp(1.25rem, 1.1rem + 0.6vw, 1.75rem);
+  --fs-lead: clamp(1.05rem, 1rem + 0.3vw, 1.375rem);
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-micro: 0.75rem;
+
+  --lh-tight: 1.02;
+  --lh-snug: 1.3;
+  --lh-normal: 1.6;
 
   --fw-regular: 400;
   --fw-medium: 500;
+  --fw-semibold: 600;
   --fw-bold: 700;
 
   /* Spacing */
@@ -30,15 +39,20 @@
   --space-3: 1.5rem;
   --space-4: 2rem;
   --space-5: 3rem;
-  --space-6: 4rem;
-  --space-7: 6rem;
+  --space-6: 5rem;
+  --space-7: 8rem;
+  --space-8: 12rem;
 
   /* Layout */
-  --content-max: 880px;
-  --nav-height: 64px;
+  --content-max: 1320px;
+  --nav-height: 88px;
+  --radius-sm: 8px;
+  --radius-md: 16px;
 
   /* Motion */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-  --dur-fast: 150ms;
-  --dur-med: 320ms;
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 200ms;
+  --dur-med: 450ms;
+  --dur-slow: 900ms;
 }

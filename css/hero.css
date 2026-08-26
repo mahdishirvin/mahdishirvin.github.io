@@ -1,0 +1,117 @@
+.hero {
+  position: relative;
+  min-height: calc(100svh - var(--nav-height));
+  display: flex;
+  align-items: center;
+  background: var(--color-hero-bg);
+  color: var(--color-hero-fg);
+  overflow: hidden;
+}
+
+.hero__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding: var(--space-6) var(--space-3);
+}
+
+.hero__avatar {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--color-hero-border);
+  margin-bottom: var(--space-3);
+}
+
+.hero__eyebrow {
+  color: var(--color-accent-on-dark);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
+}
+
+.hero__title {
+  font-size: var(--fs-display);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: -0.02em;
+  max-width: 16ch;
+}
+
+.hero__lead {
+  margin-top: var(--space-3);
+  font-size: var(--fs-lead);
+  color: var(--color-hero-fg-muted);
+  max-width: 56ch;
+  line-height: var(--lh-snug);
+}
+
+.hero__lead a {
+  color: var(--color-hero-fg);
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent-on-dark);
+  text-underline-offset: 3px;
+}
+
+.hero__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.hero__scroll-cue {
+  position: absolute;
+  left: 50%;
+  bottom: var(--space-3);
+  transform: translateX(-50%);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--color-hero-fg-muted);
+  font-size: var(--fs-micro);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero__scroll-cue svg {
+  animation: hero-scroll-bounce 1.8s ease-in-out infinite;
+}
+
+@keyframes hero-scroll-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__scroll-cue svg {
+    animation: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero__scroll-cue {
+    display: none;
+  }
+}

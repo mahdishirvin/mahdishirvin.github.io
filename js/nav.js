@@ -1,6 +1,6 @@
 (function () {
   var toggle = document.querySelector(".site-nav__toggle");
-  var links = document.querySelector(".site-nav__links");
+  var links = document.querySelector(".site-nav__center");
 
   if (!toggle || !links) return;
 
@@ -29,6 +29,6 @@
   });
 
   window.addEventListener("resize", function () {
-    if (window.innerWidth > 768) closeMenu();
+    if (window.innerWidth > 640) closeMenu();
   });
 })();

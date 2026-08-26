@@ -5,16 +5,18 @@ static site — no template, no framework, no build step.
 
 ## Structure
 
-- `index.html` — the single page (intro, portfolio, about, contact)
+- `index.html` — the single page (intro, work, about, contact)
 - `css/`
   - `reset.css` — minimal base reset
   - `tokens.css` — color, type, spacing, and motion custom properties
-  - `layout.css` — page shell, nav, section rhythm, grids
-  - `components.css` — buttons, cards, modal, icons, footer
-  - `hero.css` — hero section layout
+  - `layout.css` — page shell, nav, section rhythm
+  - `components.css` — work/contact rows, modal, timeline, footer
+  - `hero.css` — hero section and floating-image stage
 - `js/`
   - `nav.js` — mobile nav (hamburger) toggle
-  - `hero-background.js` — canvas dot-grid hero animation, respects `prefers-reduced-motion`
+  - `hero-parallax.js` — cursor-tilt on the hero image, and swaps it to preview whichever
+    Work row is hovered/focused; respects `prefers-reduced-motion`
+  - `clock.js` — live local-time readout in the nav
   - `portfolio-modal.js` — accessible modal (focus trap, Escape to close) for the Tableau embed
 - `images/` — portfolio and profile images
 - `docs/superpowers/` — design spec and implementation plan for this rebuild

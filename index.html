@@ -32,7 +32,7 @@
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 
 	<link rel="stylesheet" href="css/reset.css" />
 	<link rel="stylesheet" href="css/tokens.css" />
@@ -45,21 +45,25 @@
 
 	<nav class="site-nav" aria-label="Primary">
 		<div class="site-nav__inner">
-			<a href="#top" class="site-nav__brand">Mahdi Shirvin<span> · Data Analyst</span></a>
+			<a href="#top" class="site-nav__brand">
+				<img class="site-nav__logo" src="images/LogoMakr_8JfNbR.png" alt="" width="22" height="22" />
+				Mahdi Shirvin
+			</a>
 
-			<div class="site-nav__links" id="site-nav-links">
-				<ul class="site-nav__list">
-					<li><a href="#top">Intro</a></li>
-					<li><a href="#portfolio">Portfolio</a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-				<a href="images/CV_Mahdi_Shirvin.pdf" download="Mahdi_Shirvin_Resume.pdf" class="btn btn--primary">Résumé</a>
+			<div class="site-nav__center" id="site-nav-links">
+				<a href="#work">Work</a>
+				<a href="#about">About</a>
+				<a href="#contact">Contact</a>
+			</div>
+
+			<div class="site-nav__right">
+				<span class="site-nav__clock" id="local-clock" aria-hidden="true"></span>
+				<a href="images/CV_Mahdi_Shirvin.pdf" download="Mahdi_Shirvin_Resume.pdf" class="site-nav__resume">[résumé]</a>
 			</div>
 
 			<button type="button" class="site-nav__toggle" aria-expanded="false" aria-controls="site-nav-links" aria-label="Toggle menu">
-				<svg class="icon-menu" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
-				<svg class="icon-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+				<svg class="icon-menu" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+				<svg class="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
 			</button>
 		</div>
 	</nav>
@@ -67,116 +71,157 @@
 	<main id="main">
 
 		<header id="top" class="hero">
-			<canvas id="hero-canvas" class="hero__canvas" aria-hidden="true"></canvas>
-
-			<div class="hero__inner">
-				<img class="hero__avatar" src="images/avatar.jpg" alt="Portrait of Mahdi Shirvin" width="84" height="84" />
+			<div class="container hero__inner">
 				<p class="hero__eyebrow">Data &amp; BI Analyst</p>
-				<h1 class="hero__title">Mahdi Shirvin</h1>
-				<p class="hero__lead">Data analyst and data visualization specialist, currently at <a href="https://www.ozarkconsulting.net/" target="_blank" rel="noopener noreferrer">OMC</a>.</p>
 
-				<div class="hero__actions">
-					<a href="images/CV_Mahdi_Shirvin.pdf" download="Mahdi_Shirvin_Resume.pdf" class="btn btn--primary">Download résumé</a>
-					<a href="#portfolio" class="btn btn--ghost">View portfolio</a>
+				<div class="hero__stage">
+					<div class="hero__frame">
+						<img class="hero__img is-active" data-default src="images/avatar.jpg" alt="Portrait of Mahdi Shirvin" width="220" height="220" />
+						<img class="hero__img" data-preview-img="airbnb" src="images/airbnb.jpg" alt="" width="220" height="220" />
+						<img class="hero__img" data-preview-img="population" src="images/pic05.png" alt="" width="220" height="220" />
+						<img class="hero__img" data-preview-img="network" src="images/pic04.png" alt="" width="220" height="220" />
+						<img class="hero__img" data-preview-img="arcgis" src="images/pic03.png" alt="" width="220" height="220" />
+						<img class="hero__img" data-preview-img="foodprice" src="images/foodprice.jpg" alt="" width="220" height="220" />
+						<img class="hero__img" data-preview-img="powerbi" src="images/giphy.gif" alt="" width="220" height="220" />
+					</div>
 				</div>
-			</div>
 
-			<div class="hero__scroll-cue" aria-hidden="true">
-				<span>Scroll</span>
-				<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+				<h1 class="hero__name">Mahdi Shirvin</h1>
+				<p class="hero__bio">Data analyst and data visualization specialist, currently at <a href="https://www.ozarkconsulting.net/" target="_blank" rel="noopener noreferrer">OMC</a>.</p>
 			</div>
 		</header>
 
-		<section id="portfolio" class="section">
+		<section id="work" class="section">
 			<div class="container">
 				<div class="section-header">
-					<h2>Portfolio</h2>
-					<p>Data visualization and analysis projects I'm most proud of.</p>
+					<span class="index">01</span>
+					<h2>Work</h2>
 				</div>
+				<p class="section-lead">Data visualization and analysis projects I'm most proud of. Hover a row to preview it above.</p>
 
-				<div class="portfolio-grid">
-
-					<a class="card" href="https://github.com/mahdishirvin/ML-Airbnb/blob/Phase-2/Project1_Regression_Mahdi.ipynb" target="_blank" rel="noopener noreferrer">
-						<div class="card__media"><img src="images/airbnb.jpg" alt="City skyline photo used as the Airbnb price forecast project's cover image" width="1200" height="802" loading="lazy" /></div>
-						<div class="card__body">
-							<h3 class="card__title">Airbnb price forecast — regression</h3>
-							<span class="card__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg></span>
+				<ul class="row-list">
+					<li>
+						<a class="row" href="https://github.com/mahdishirvin/ML-Airbnb/blob/Phase-2/Project1_Regression_Mahdi.ipynb" target="_blank" rel="noopener noreferrer" data-preview="airbnb">
+							<span class="row__title">
+								<svg class="row__icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg>
+								Airbnb price forecast — regression
+							</span>
+							<span class="row__tag">Python · Regression</span>
+						</a>
+					</li>
+					<li>
+						<a class="row" href="https://app.powerbi.com/view?r=eyJrIjoiOGIyMTIxNTAtYzYxYi00YmFlLWEyZTItNTM2YmY4ZmU5MmJlIiwidCI6IjhkMjgxZDFkLTljNGQtNGJmNy1iMTZlLTAzMmQxNWRlOWY2YyIsImMiOjN9" target="_blank" rel="noopener noreferrer" data-preview="population">
+							<span class="row__title">
+								<svg class="row__icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg>
+								US population over time — animation
+							</span>
+							<span class="row__tag">Power BI</span>
+						</a>
+					</li>
+					<li>
+						<a class="row" href="https://mahdishirvin.github.io/NetworkApple.github.io/" target="_blank" rel="noopener noreferrer" data-preview="network">
+							<span class="row__title">
+								<svg class="row__icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg>
+								Apple.com's network
+							</span>
+							<span class="row__tag">Network graph</span>
+						</a>
+					</li>
+					<li>
+						<a class="row" href="https://github.com/mahdishirvin/ArcGIS-NewLocation/blob/master/Mahdi_Shirvin_ArcGIS.pdf" target="_blank" rel="noopener noreferrer" data-preview="arcgis">
+							<span class="row__title">
+								<svg class="row__icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg>
+								New location for a restaurant — ArcGIS
+							</span>
+							<span class="row__tag">ArcGIS</span>
+						</a>
+					</li>
+					<li>
+						<button type="button" class="row" data-modal-trigger data-preview="foodprice" aria-haspopup="dialog">
+							<span class="row__title">Food price story — Tableau</span>
+							<span class="row__tag">Tableau</span>
+						</button>
+					</li>
+					<li>
+						<div class="row row--static" data-preview="powerbi">
+							<span class="row__title">Power BI dashboard</span>
+							<span class="row__tag">Coming soon</span>
 						</div>
-					</a>
-
-					<a class="card" href="https://app.powerbi.com/view?r=eyJrIjoiOGIyMTIxNTAtYzYxYi00YmFlLWEyZTItNTM2YmY4ZmU5MmJlIiwidCI6IjhkMjgxZDFkLTljNGQtNGJmNy1iMTZlLTAzMmQxNWRlOWY2YyIsImMiOjN9" target="_blank" rel="noopener noreferrer">
-						<div class="card__media"><img src="images/pic05.png" alt="Photo of a screen displaying a US population bubble map, cover image for the population-over-time project" width="1200" height="800" loading="lazy" /></div>
-						<div class="card__body">
-							<h3 class="card__title">US population over time — animation</h3>
-							<span class="card__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg></span>
-						</div>
-					</a>
-
-					<a class="card" href="https://mahdishirvin.github.io/NetworkApple.github.io/" target="_blank" rel="noopener noreferrer">
-						<div class="card__media"><img src="images/pic04.png" alt="Abstract network graph artwork used as the Apple.com network project's cover image" width="1037" height="692" loading="lazy" /></div>
-						<div class="card__body">
-							<h3 class="card__title">Apple.com's network</h3>
-							<span class="card__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg></span>
-						</div>
-					</a>
-
-					<a class="card" href="https://github.com/mahdishirvin/ArcGIS-NewLocation/blob/master/Mahdi_Shirvin_ArcGIS.pdf" target="_blank" rel="noopener noreferrer">
-						<div class="card__media"><img src="images/pic03.png" alt="ArcGIS analysis for new restaurant location" width="637" height="417" loading="lazy" /></div>
-						<div class="card__body">
-							<h3 class="card__title">New location for a restaurant — ArcGIS</h3>
-							<span class="card__icon" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg></span>
-						</div>
-					</a>
-
-					<button type="button" class="card" data-modal-trigger aria-haspopup="dialog">
-						<div class="card__media"><img src="images/foodprice.jpg" alt="Farmers market produce photo used as the food price story's cover image" width="1200" height="804" loading="lazy" /></div>
-						<div class="card__body">
-							<h3 class="card__title">Food price story — Tableau</h3>
-						</div>
-					</button>
-
-					<div class="card card--static">
-						<div class="card__media"><img src="images/giphy.gif" alt="Animated finance and growth icon graphic, placeholder cover for the Power BI dashboard project" width="800" height="450" loading="lazy" /></div>
-						<div class="card__body">
-							<h3 class="card__title">Power BI dashboard</h3>
-						</div>
-					</div>
-
-				</div>
+					</li>
+				</ul>
 			</div>
 		</section>
 
-		<section id="about" class="section section--tight">
+		<section id="about" class="section">
 			<div class="container">
 				<div class="section-header">
-					<h2>About Me</h2>
+					<span class="index">02</span>
+					<h2>About</h2>
 				</div>
+				<p class="section-lead">I am a professional Data Analyst, graduated from <a href="https://www.utdallas.edu">University of Texas at Dallas</a> in May 2020 with a Master of Management Science. What drew me to the world of data was the dynamic nature of the industry — engagements and client needs change regularly, so there's always something new to learn, and I love researching new technical solutions and testing them.</p>
 
-				<div class="about-grid">
-					<div class="about-photo">
-						<img src="images/pic08-1.png" alt="Career timeline graphic: education and work history from 2015 to present" width="1574" height="440" loading="lazy" />
-					</div>
-					<div class="about-copy">
-						<p>I am a professional Data Analyst, graduated from <a href="https://www.utdallas.edu">University of Texas at Dallas</a> in May 2020 with a Master of Management Science. What drew me to the world of data was the dynamic nature of the industry — engagements and client needs change regularly, so there's always something new to learn, and I love researching new technical solutions and testing them.</p>
-					</div>
-				</div>
+				<ol class="timeline">
+					<li class="timeline__item">
+						<span class="timeline__date">Jul 2015 – Dec 2015</span>
+						<span><span class="timeline__role">Merchandiser</span> <span class="timeline__org">— Behin Bazar</span></span>
+					</li>
+					<li class="timeline__item">
+						<span class="timeline__date">Feb 2016</span>
+						<span><span class="timeline__role">BSc, Industrial Engineering</span></span>
+					</li>
+					<li class="timeline__item">
+						<span class="timeline__date">Dec 2015 – Aug 2018</span>
+						<span><span class="timeline__role">Content &amp; Data Team Manager</span> <span class="timeline__org">— Noavaran Sharif</span></span>
+					</li>
+					<li class="timeline__item">
+						<span class="timeline__date">Mar 2019 – Apr 2020</span>
+						<span><span class="timeline__role">Graduate Teaching Assistant</span> <span class="timeline__org">— UT Dallas</span></span>
+					</li>
+					<li class="timeline__item">
+						<span class="timeline__date">Apr 2020</span>
+						<span><span class="timeline__role">MSc, Management Science</span></span>
+					</li>
+					<li class="timeline__item">
+						<span class="timeline__date">Apr 2020 – Today</span>
+						<span><span class="timeline__role">Data Analyst</span> <span class="timeline__org">— OMC</span></span>
+					</li>
+				</ol>
 			</div>
 		</section>
 
-		<section id="contact" class="section contact">
+		<section id="contact" class="section">
 			<div class="container">
 				<div class="section-header">
+					<span class="index">03</span>
 					<h2>Contact</h2>
-					<p>Feel free to reach out with any questions. For open-source projects, open an issue or pull request on <a href="https://github.com/mahdishirvin" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
 				</div>
+				<p class="section-lead">Feel free to reach out with any questions. For open-source projects, open an issue or pull request on GitHub.</p>
 
-				<a href="mailto:mahdishirvin@gmail.com" class="contact__email">mahdishirvin@gmail.com</a>
-
-				<ul class="icon-row">
-					<li><a href="https://www.linkedin.com/in/mahdi-shirvin/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S.02 4.88.02 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.24h4V23h-4V8.24zM8.5 8.24h3.83v2.02h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V23h-4v-6.72c0-1.6-.03-3.66-2.23-3.66-2.24 0-2.58 1.75-2.58 3.55V23h-4V8.24z"/></svg></a></li>
-					<li><a href="https://twitter.com/mahdishirvin" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22 5.9c-.68.3-1.4.5-2.16.6a3.8 3.8 0 0 0 1.66-2.1c-.73.43-1.54.75-2.4.92A3.77 3.77 0 0 0 12.7 8.6 10.7 10.7 0 0 1 4.9 4.7a3.77 3.77 0 0 0 1.17 5.03c-.6-.02-1.17-.19-1.67-.46v.05c0 1.83 1.3 3.36 3.03 3.7-.32.09-.65.13-1 .13-.24 0-.48-.02-.71-.07a3.78 3.78 0 0 0 3.53 2.62A7.57 7.57 0 0 1 2 17.54a10.68 10.68 0 0 0 5.79 1.7c6.95 0 10.75-5.76 10.75-10.75l-.01-.49A7.7 7.7 0 0 0 22 5.9z"/></svg></a></li>
-					<li><a href="https://github.com/mahdishirvin" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.48 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.36-3.37-1.36-.46-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.81 0 .27.18.58.69.48A10.02 10.02 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"/></svg></a></li>
-					<li><a href="mailto:mahdishirvin@gmail.com" aria-label="Email"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a></li>
+				<ul class="contact-list">
+					<li>
+						<a href="mailto:mahdishirvin@gmail.com">
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+							mahdishirvin@gmail.com
+						</a>
+					</li>
+					<li>
+						<a href="https://www.linkedin.com/in/mahdi-shirvin/" target="_blank" rel="noopener noreferrer">
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S.02 4.88.02 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.24h4V23h-4V8.24zM8.5 8.24h3.83v2.02h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V23h-4v-6.72c0-1.6-.03-3.66-2.23-3.66-2.24 0-2.58 1.75-2.58 3.55V23h-4V8.24z"/></svg>
+							linkedin.com/in/mahdi-shirvin
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/mahdishirvin" target="_blank" rel="noopener noreferrer">
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.48 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.36-3.37-1.36-.46-1.19-1.11-1.5-1.11-1.5-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.48-.01 2.81 0 .27.18.58.69.48A10.02 10.02 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"/></svg>
+							github.com/mahdishirvin
+						</a>
+					</li>
+					<li>
+						<a href="https://twitter.com/mahdishirvin" target="_blank" rel="noopener noreferrer">
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22 5.9c-.68.3-1.4.5-2.16.6a3.8 3.8 0 0 0 1.66-2.1c-.73.43-1.54.75-2.4.92A3.77 3.77 0 0 0 12.7 8.6 10.7 10.7 0 0 1 4.9 4.7a3.77 3.77 0 0 0 1.17 5.03c-.6-.02-1.17-.19-1.67-.46v.05c0 1.83 1.3 3.36 3.03 3.7-.32.09-.65.13-1 .13-.24 0-.48-.02-.71-.07a3.78 3.78 0 0 0 3.53 2.62A7.57 7.57 0 0 1 2 17.54a10.68 10.68 0 0 0 5.79 1.7c6.95 0 10.75-5.76 10.75-10.75l-.01-.49A7.7 7.7 0 0 0 22 5.9z"/></svg>
+							twitter.com/mahdishirvin
+						</a>
+					</li>
 				</ul>
 			</div>
 		</section>
@@ -190,7 +235,7 @@
 	<div class="modal-backdrop" data-modal-backdrop hidden>
 		<div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
 			<button type="button" class="modal__close" data-modal-close aria-label="Close dialog">
-				<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
+				<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
 			</button>
 			<h2 id="modal-title" class="modal__title">Food price story — Tableau</h2>
 			<div class="modal__viz-wrap">
@@ -201,7 +246,8 @@
 
 	<script type='text/javascript' src='https://prod-useast-a.online.tableau.com/javascripts/api/viz_v1.js'></script>
 	<script src="js/nav.js"></script>
-	<script src="js/hero-background.js"></script>
+	<script src="js/hero-parallax.js"></script>
+	<script src="js/clock.js"></script>
 	<script src="js/portfolio-modal.js"></script>
 </body>
 </html>

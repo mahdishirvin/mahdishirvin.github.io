@@ -1,39 +1,40 @@
 :root {
-  /* Color — cinematic dark, dual-accent gradient */
-  --color-bg: #05060a;
-  --color-bg-raised: #0d0f1a;
-  --color-surface: #12141f;
-  --color-fg: #f4f5f7;
-  --color-fg-muted: #9aa0ac;
-  --color-line: rgba(244, 245, 247, 0.12);
+  /* ── Color ─────────────────────────────────────────── */
+  --color-bg:        #07080d;
+  --color-bg-raised: #0d0f18;
+  --color-fg:        #eef0f8;
+  --color-fg-muted:  rgba(238, 240, 248, 0.5);
+  --color-accent-1:  #6d5dfc;
+  --color-accent-2:  #00c8b8;
+  --color-line:      rgba(255, 255, 255, 0.07);
+  --color-surface:   rgba(255, 255, 255, 0.04);
 
-  --color-accent-1: #8b5cf6;
-  --color-accent-2: #22d3ee;
   --gradient-accent: linear-gradient(135deg, var(--color-accent-1), var(--color-accent-2));
 
-  /* Type */
-  --font-display: "Clash Display", "Inter", -apple-system, sans-serif;
-  --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  /* ── Typography ─────────────────────────────────────── */
+  --font-display: 'Syne', system-ui, sans-serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', 'Cascadia Code', ui-monospace, monospace;
 
-  --fs-hero: clamp(3.5rem, 3rem + 7vw, 9.5rem);
-  --fs-h2: clamp(2.25rem, 1.8rem + 2vw, 3.5rem);
-  --fs-h3: clamp(1.25rem, 1.1rem + 0.6vw, 1.75rem);
-  --fs-lead: clamp(1.05rem, 1rem + 0.3vw, 1.375rem);
-  --fs-body: 1rem;
-  --fs-small: 0.875rem;
-  --fs-micro: 0.75rem;
+  --fw-regular:   400;
+  --fw-medium:    500;
+  --fw-semibold:  600;
+  --fw-bold:      700;
+  --fw-extrabold: 800;
 
-  --lh-tight: 1.02;
-  --lh-snug: 1.3;
+  --fs-hero:   clamp(4.5rem, 4rem + 9vw, 11rem);
+  --fs-h2:     clamp(2.2rem, 1.8rem + 3vw, 4.5rem);
+  --fs-h3:     clamp(1.1rem, 0.9rem + 0.8vw, 1.5rem);
+  --fs-lead:   clamp(1rem, 0.9rem + 0.3vw, 1.15rem);
+  --fs-body:   1rem;
+  --fs-small:  0.8125rem;
+  --fs-xsmall: 0.6875rem;
+
+  --lh-tight:  0.88;
+  --lh-snug:   1.1;
   --lh-normal: 1.6;
 
-  --fw-regular: 400;
-  --fw-medium: 500;
-  --fw-semibold: 600;
-  --fw-bold: 700;
-
-  /* Spacing */
+  /* ── Spacing ────────────────────────────────────────── */
   --space-1: 0.5rem;
   --space-2: 1rem;
   --space-3: 1.5rem;
@@ -41,18 +42,19 @@
   --space-5: 3rem;
   --space-6: 5rem;
   --space-7: 8rem;
-  --space-8: 12rem;
 
-  /* Layout */
-  --content-max: 1320px;
-  --nav-height: 88px;
-  --radius-sm: 8px;
-  --radius-md: 16px;
+  /* ── Layout ─────────────────────────────────────────── */
+  --nav-height:  64px;
+  --content-max: 1200px;
+  --radius-sm:   4px;
+  --radius-md:   10px;
+  --radius-lg:   18px;
+  --radius-xl:   26px;
 
-  /* Motion */
-  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
-  --dur-fast: 200ms;
-  --dur-med: 450ms;
-  --dur-slow: 900ms;
+  /* ── Animation ──────────────────────────────────────── */
+  --dur-fast:    180ms;
+  --dur-normal:  380ms;
+  --dur-slow:    700ms;
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.87, 0, 0.13, 1);
 }
